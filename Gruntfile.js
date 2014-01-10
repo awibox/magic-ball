@@ -21,7 +21,7 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: ['assets/js/*.js'],
-                dest: 'public/js/build.js'
+                dest: 'public_html/js/build.js'
             }
         },
 
@@ -32,8 +32,8 @@ module.exports = function (grunt) {
             },
 
             build: {
-                src: 'public/js/build.js',
-                dest: 'public/js/build.min.js'
+                src: 'public_html/js/build.js',
+                dest: 'public_html/js/build.min.js'
             }
         },
 
@@ -43,7 +43,7 @@ module.exports = function (grunt) {
                     paths: ["assets/css"]
                 },
                 files: {
-                    "public/css/style.css": "assets/less/style.less"
+                    "public_html/css/style.css": "assets/less/style.less"
                 }
             }
         },
@@ -54,7 +54,7 @@ module.exports = function (grunt) {
                 },
 
                 files: {
-                    'public/css/style.min.css' : ['public/css/style.css']   // первая строка - output файл. массив из строк, какие файлы конкатенировать и минифицировать.
+                    'public_html/css/style.min.css' : ['public_html/css/style.css']   // первая строка - output файл. массив из строк, какие файлы конкатенировать и минифицировать.
                 }
             }
         },
@@ -72,8 +72,8 @@ module.exports = function (grunt) {
 
         removelogging: {
             dist: {
-                src: "public/js/build.min.js",
-                dest: "public/js/build.clean.js"
+                src: "public_html/js/build.min.js",
+                dest: "public_html/js/build.clean.js"
             }
         }
     });
