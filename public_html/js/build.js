@@ -9,8 +9,9 @@ $(function() {
             counts[ 0 ]++;
             updateCounterStatus( $start_counter, counts[ 0 ] );
             $('#magic-ball__value').stop();
-            $('#magic-ball__value').fadeOut();
-            $('#magic-ball__value').removeClass();
+            $('#magic-ball__value').fadeOut("slow", function() {
+                $('#magic-ball__value').removeClass();
+            });
         },
         drag: function() {
             counts[ 1 ]++;
@@ -19,10 +20,16 @@ $(function() {
         stop: function() {
             counts[ 2 ]++;
             updateCounterStatus( $stop_counter, counts[ 2 ] );
-            $('#magic-ball__value').fadeIn(2000);
-            var answer = Math.floor(Math.random() * (4 - 1 + 1) + 1);
+
+            var answer = Math.floor(Math.random() * (1 - 1 + 1) + 1);
             if (answer == 1) {
+
+
+
                 $("#magic-ball__value-text").html('Соберись <br>с мыслями<br> и спроси<br> снова');
+                $('#magic-ball__value').addClass("magic-ball__value_01", function() {
+                    $('#magic-ball__value').fadeIn(2000);
+                });
             }
             else if (answer == 2) {
                 console.log("нет")
