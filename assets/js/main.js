@@ -21,8 +21,7 @@ $(function() {
             counts[ 2 ]++;
             updateCounterStatus( $stop_counter, counts[ 2 ] );
 
-            var answer = Math.floor(Math.random() * (3 - 1 + 1) + 1);
-            answer = 14;
+            var answer = Math.floor(Math.random() * (24 - 1 + 1) + 1);
             if (answer == 1) {
                 $("#magic-ball__value-text").html('Соберись <br>с мыслями<br> и спроси<br> снова');
                 $('#magic-ball__value').addClass("magic-ball__value_01", function() {
@@ -60,7 +59,7 @@ $(function() {
                 });
             }
             else if (answer == 7) {
-                $("#magic-ball__value-text").html('Перспектива<br> не очень<br> хорошая');
+                $("#magic-ball__value-text").html('Перспектива<br>не очень<br>хорошая');
                 $('#magic-ball__value').addClass("magic-ball__value_02", function() {
                     $('#magic-ball__value').fadeIn(1000);
                 });
@@ -103,6 +102,72 @@ $(function() {
             }
             else if (answer == 14) {
                 $("#magic-ball__value-text").html('Извини,<br> нет');
+                $('#magic-ball__value').addClass("magic-ball__value_07", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else if (answer == 15) {
+                $("#magic-ball__value-text").html('Без<br> сомнения');
+                $('#magic-ball__value').addClass("magic-ball__value_03", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else if (answer == 16) {
+                $("#magic-ball__value-text").html('Шанс<br>есть');
+                $('#magic-ball__value').addClass("magic-ball__value_06", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else if (answer == 17) {
+                $("#magic-ball__value-text").html('Может<br>быть');
+                $('#magic-ball__value').addClass("magic-ball__value_07", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else if (answer == 18) {
+                $("#magic-ball__value-text").html('Не могу<br> знать');
+                $('#magic-ball__value').addClass("magic-ball__value_07", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else if (answer == 19) {
+                $("#magic-ball__value-text").html('Сомневаюсь<br> на счет<br> этого');
+                $('#magic-ball__value').addClass("magic-ball__value_02", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else if (answer == 20) {
+                $("#magic-ball__value-text").html('Скорее<br>всего');
+                $('#magic-ball__value').addClass("magic-ball__value_07", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else if (answer == 21) {
+                $("#magic-ball__value-text").html('Перспектива<br>хорошая');
+                $('#magic-ball__value').addClass("magic-ball__value_02", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else if (answer == 22) {
+                $("#magic-ball__value-text").html('Очень<br>вероятно');
+                $('#magic-ball__value').addClass("magic-ball__value_03", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else if (answer == 23) {
+                $("#magic-ball__value-text").html('Я думаю,<br>что да');
+                $('#magic-ball__value').addClass("magic-ball__value_07", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else if (answer == 24) {
+                $("#magic-ball__value-text").html('Спроси<br> позже');
+                $('#magic-ball__value').addClass("magic-ball__value_07", function() {
+                    $('#magic-ball__value').fadeIn(1000);
+                });
+            }
+            else {
+                $("#magic-ball__value-text").html('Спроси<br> снова');
                 $('#magic-ball__value').addClass("magic-ball__value_07", function() {
                     $('#magic-ball__value').fadeIn(1000);
                 });
