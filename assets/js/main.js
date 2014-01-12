@@ -1,7 +1,5 @@
 $(function() {
     var $start_counter = $( "#event-start" ),
-        $drag_counter = $( "#event-drag" ),
-        $stop_counter = $( "#event-stop" ),
         counts = [ 0, 0, 0 ];
 
     $( "#magic-ball" ).draggable({
@@ -14,14 +12,14 @@ $(function() {
             $('#magic-ball__value').css('opacity','0');
 
         },
-        drag: function() {
-            counts[ 1 ]++;
-            updateCounterStatus( $drag_counter, counts[ 1 ] );
-        },
+//        drag: function() {
+//            counts[ 1 ]++;
+//            updateCounterStatus( $drag_counter, counts[ 1 ] );
+//        },
         stop: function() {
             event.preventDefault()
             var answer = Math.floor(Math.random() * (24 - 1 + 1) + 1);
-//            answer = 5;
+//            answer = 3;
             var magicBallShow = function() {
                 $('#magic-ball__value').animate({opacity: 1},1000);
             }
