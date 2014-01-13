@@ -78,7 +78,7 @@ module.exports = function (grunt) {
                 tasks: ['less', 'cssmin']
             },
             image: {
-                files: ['assets/img/*.*'],
+                files: ['assets/img/**/*.{png,jpg,gif}'],
                 tasks: ['imagemin']
             }
         },
