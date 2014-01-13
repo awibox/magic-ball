@@ -8,7 +8,6 @@ module.exports = function (grunt) {
                 curly: true,
                 eqnull: true,
                 eqeqeq: true,
-                undef: true,
                 globals: {
                     jQuery: true
                 }
@@ -72,7 +71,7 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: ['assets/js/*.js'],
-                tasks: ['concat', 'uglify', 'removelogging','jshint']
+                tasks: ['concat', 'uglify', 'removelogging']
             },
             css: {
                 files: ['assets/less/*.less'],
@@ -101,7 +100,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-remove-logging');
 
-    grunt.registerTask('default', ['concat', 'uglify', 'less', 'cssmin', 'imagemin', 'removelogging', 'watch', 'jshint']);
+    grunt.registerTask('default', ['concat', 'uglify', 'less', 'cssmin', 'imagemin', 'removelogging', 'watch']);
     grunt.registerTask('debug', ['jshint']);
 
 };

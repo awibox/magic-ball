@@ -11,12 +11,21 @@ html,body {
 body {
   font: 12px/14px Arial, sans-serif;
   width: 100%;
+  min-height: 500px;
   position: relative;
+}
+#information {
+  position: absolute;
+  right: 30px;
+  text-align: center;
+  top: 20px;
+  font-size: 16px;
+  color: #555;
 }
 .ui-helper-reset {
   position: absolute;
   right: 30px;
-  top: 30px;
+  bottom: 20px;
   font-size: 16px;
   color: #555;
   .count {
@@ -32,6 +41,7 @@ body {
   left: 5%;
   top: 10%;
   background: url(../img/magic-ball.png) no-repeat;
+  z-index: 90000;
 }
 #magic-ball__value {
   background: url(../img/magic-ball__value.png) no-repeat 0 0;
@@ -46,41 +56,27 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-//  -webkit-transform: rotate(120deg);
-//  -moz-transform: rotate(120deg);
-//  -ms-transform: rotate(120deg);
-//  -o-transform: rotate(30deg);
-//  transform: rotate(30deg);
 }
-.magic-ball__value_01 {
+.rotate {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+.magic-ball__value_01 {
+  .rotate;
   padding-top: 35px;
 }
 .magic-ball__value_01 #magic-ball__value-text {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(190deg);
-  -o-transform: rotate(190deg);
-  transform: rotate(190deg);
+  .rotate;
 }
 .magic-ball__value_02 {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  .rotate;
   padding-top: 50px;
 }
 .magic-ball__value_02 #magic-ball__value-text {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  .rotate;
 }
 .magic-ball__value_03 {
   padding-top: 45px;
@@ -98,19 +94,23 @@ body {
   line-height: 18px;
 }
 .magic-ball__value_07 {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  .rotate;
   padding-top: 45px;
   font-size: 14px;
   line-height: 18px;
 }
 .magic-ball__value_07 #magic-ball__value-text {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  .rotate;
+}
+
+.ui-tooltip {
+  padding: 8px;
+  position: absolute;
+  z-index: 9999;
+  max-width: 300px;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa;
+}
+body .ui-tooltip {
+  border-width: 2px;
 }
