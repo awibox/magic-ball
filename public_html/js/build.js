@@ -20,7 +20,6 @@ $(function() {
 //            updateCounterStatus( $drag_counter, counts[ 1 ] );
 //        },
         stop: function() {
-            event.preventDefault();
             var answer = Math.floor(Math.random() * (24 - 1 + 1) + 1);
 //            answer = 3;
             function magicBallShow() {
