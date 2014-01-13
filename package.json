@@ -8,6 +8,7 @@
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-less": "latest",
     "grunt-contrib-cssmin" : "latest",
+    "grunt-contrib-imagemin" : "latest",
     "grunt-contrib-watch": "latest",
     "grunt-remove-logging": "latest"
   }
