@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: ['assets/js/*.js'],
-                dest: 'public_html/js/build.js'
+                dest: 'www/js/build.js'
             }
         },
 
@@ -31,8 +31,8 @@ module.exports = function (grunt) {
             },
 
             build: {
-                src: 'public_html/js/build.js',
-                dest: 'public_html/js/build.min.js'
+                src: 'www/js/build.js',
+                dest: 'www/js/build.min.js'
             }
         },
 
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
                     paths: ["assets/css"]
                 },
                 files: {
-                    "public_html/css/style.css": "assets/less/style.less"
+                    "www/css/style.css": "assets/less/style.less"
                 }
             }
         },
@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                 },
 
                 files: {
-                    'public_html/css/style.min.css' : ['public_html/css/style.css']   // первая строка - output файл. массив из строк, какие файлы конкатенировать и минифицировать.
+                    'www/css/style.min.css' : ['www/css/style.css']   // первая строка - output файл. массив из строк, какие файлы конкатенировать и минифицировать.
                 }
             }
         },
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
                     expand: true,                  // Enable dynamic expansion
                     cwd: 'assets/img/',                   // Src matches are relative to this path
                     src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-                    dest: 'public_html/img/'                  // Destination path prefix
+                    dest: 'www/img/'                  // Destination path prefix
                 }]
             }
         },
@@ -85,8 +85,8 @@ module.exports = function (grunt) {
 
         removelogging: {
             dist: {
-                src: "public_html/js/build.min.js",
-                dest: "public_html/js/build.clean.js"
+                src: "www/js/build.min.js",
+                dest: "www/js/build.clean.js"
             }
         }
     });
