@@ -49,8 +49,9 @@ body {
   position: absolute;
   width: 260px;
   height: 260px;
-  left: 5%;
-  top: 10%;
+  top: 120px;
+  left: 50%;
+  margin-left: -130px;
   background: url(../img/magic-ball.png) no-repeat;
   z-index: 90000;
 }
@@ -67,6 +68,11 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 .rotate {
   -webkit-transform: rotate(180deg);
@@ -96,7 +102,7 @@ body {
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
-  padding-top: 50px;
+  padding-top: 45px;
 }
 .magic-ball__value_02 #magic-ball__value-text {
   -webkit-transform: rotate(180deg);
