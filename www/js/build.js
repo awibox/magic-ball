@@ -1,7 +1,4 @@
 $(function() {
-    var $start_counter = $( "#event-start" ),
-        counts = [ 0, 0, 0 ];
-
     $("#information").tooltip();
     $("#magic-ball").click(function() {
             $('#magic-ball__value').fadeOut('300', function(){
